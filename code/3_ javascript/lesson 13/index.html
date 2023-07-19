@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<meta />
+	<title>Learning JavaScript</title>
+	<style type="text/css">
+		div {
+			height: 200px;
+			width: 200px;
+			float: left;
+			margin: 10px;
+			padding: 20px;
+			background-color: #eaeaea;
+		}
+		#redcircle {
+			background-color: red;
+			border-radius: 200px;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<p id="first">My name is Aaron.</p>
+	<button id="myButton">Click me!</button>
+	
+	<!-- MY NEW BUTTONS ------------->
+	<hr>
+	
+	<input id="movie" type="text" value="Avatar" />
+	<button id="textChanger">Change text</button>
+	<div id="one">
+		My favorite movie is ...
+	</div>
+	
+	<div id="two">
+		Computer B class is...
+		<button id="textAppender">Append text</button>
+	</div>
+	
+	<div id="three">
+		<button id="textCreator">Create text</button>
+	</div>
+	<!-- END MY NEW BUTTONS ------------->
+	
+	<div id="redcircle"></div>
+	
+	<script>
+		var div1 = "first";
+	
+		document.getElementById(div1).innerHTML = "My name is Fred.";
+		document.getElementById(div1).style.color = "red";
+		
+		document.getElementById("myButton").onclick = function() {
+			alert("You clicked my button!");
+		}
+		
+		var box1 = document.getElementById("one");
+		var box2 = document.getElementById("two");
+		var box3 = document.getElementById("three");
+		
+		// Box one
+		var newText = document.getElementById("movie").value;
+		
+		document.getElementById("textChanger").onclick = function() {
+			newText = document.getElementById("movie").value;
+			box1.innerHTML = "My favorite movie is " + newText + ".";
+		}
+		// Box two
+		document.getElementById("textAppender").onclick = function() {
+			box2.innerHTML = box2.innerHTML + "...hard.";
+		}
+		// Box three
+		document.getElementById("textCreator").onclick = function() {
+			box3.innerHTML = "<ul><li>Cat</li><li>Dog</li><li>Hamster</li></ul>";
+		}
+		
+		// Create a red circle <div> that disappears if you click it.
+		// Don't use .innerHTML, use .style.display = "";
+		document.getElementById("redcircle").onclick = function() {
+			document.getElementById("redcircle").style.display = "none";
+		}
+		// this
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<meta />
+	<title>Position</title>
+	<style type="text/css">
+		body {
+			background-color: black;
+		}
+		#page {
+			background-color: #eaeaea;
+			width: 960px;
+			margin: 0 auto;
+		}
+		header, footer {
+			background-color: orange;
+		}
+		section {
+			background-color: #3f1;
+			width: 720px;
+			height: 6000px;
+			float: right;
+		}
+		aside {
+			background-color: green;
+			width: 240px;
+			height: 600px;
+			float: left;
+		}
+		#main-menu li {
+			display: inline;
+			padding-right: 20px;
+		}
+		article {
+			background-color: purple;
+			width: 340px;
+			height: 240px;
+			margin: 10px;
+			float: left;
+		}
+		.one {
+			position: absolute;
+			background-color: pink;
+			top: 200px;
+			right: 100px;
+			z-index: 1;
+		}
+		.two {
+			position: relative;
+			z-index: 2;
+		}
+		.three {
+			position: fixed;
+			top: 300px;
+			left: 0;
+		}
+		.four {
+			position: static;
+		}
+	</style>
+</head>
+<body>
+	<div id="page">
+	<header>
+		<hgroup>
+			<h1>Position</h1>
+			<h2>Learning floats and positioning</h2>
+		</hgroup>
+		<nav id="main-menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Hobbies</a></li>
+				<li><a href="#">Classes</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<article class="one">
+		
+		</article>
+		<article class="two">
+		
+		</article>
+		<article class="three">
+		
+		</article>
+		<article class="four">
+		
+		</article>
+	</section>
+	<aside>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Hobbies</a></li>
+				<li><a href="#">Classes</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<footer>
+		&copy; 2015 Aaron Snowberger
+	</footer>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

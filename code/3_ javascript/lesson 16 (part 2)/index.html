@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Reaction Tester</title>
+		<style type="text/css">
+			#box {
+				background-color: red;
+				width: 200px;
+				height: 200px;
+				position: relative;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h1>Reaction Tester Game!</h1>
+		<p>Click the shapes as fast as you can!</p>
+		
+		<div>Your reaction time: <span id="time"></span> seconds</div>
+		<div id="box"></div>
+		
+		<script type="text/javascript">
+			/*
+			 *	CHALLENGES
+			 *	1: Make a box on the screen
+			 *	2: Make the box disappear on click
+			 *	3: Hide the box and make it appear after 3 seconds
+			 *	4: Make the box reappear at a random time 0-5 secs
+			 *	5: Always make the box reappear at a random time
+			 *	6: Don't use alert to tell reaction time
+			 * 	7: Change the box color randomly
+			 *	8: Change the shape to a circle sometimes
+			 *	9: Change the box position on screen randomly
+			 *	10: Make a headline <h1> and instructions in <p>
+			 */
+			 // alert(Date.now());
+			 
+			 function getRandomColor() {
+				var letters = "0123456789ABCDEF".split(""); // color: #3f4e5a;
+				var color = "#";
+				
+				for ( var i=0; i<6; i++ ) {
+					color += letters[Math.round(Math.random()*15)];
+				}
+				
+				return color;
+			 }
+			 
+			 var clickedTime;
+			 var createdTime;
+			 var reactionTime;
+			 
+			 document.getElementById("box").onclick = function() {
+				this.style.display = "none"; 
+				clickedTime = Date.now();
+				reactionTime = (clickedTime - createdTime)/1000;
+				
+				document.getElementById("time").innerHTML = reactionTime;
+				
+				makeBox();
+			 }
+			 
+			 function makeBox() {
+			 
+				var top = Math.random();
+				top = top*300;
+				
+				var left = Math.random();
+				left = left*500;
+			 
+				var time = Math.random();
+				time = time*5000;
+			 
+				setTimeout( function() { 
+					document.getElementById("box").style.display = "block";
+					document.getElementById("box").style.backgroundColor = getRandomColor();
+					createdTime = Date.now();
+					
+					if( Math.random() > 0.5 ) {
+						document.getElementById("box").style.borderRadius = "200px";
+					} else {
+						document.getElementById("box").style.borderRadius = "0";
+					}
+					
+					document.getElementById("box").style.top = top + "px";
+					document.getElementById("box").style.left = left + "px";
+				}, time);
+			 }
+			 
+			 makeBox();
+			 
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+

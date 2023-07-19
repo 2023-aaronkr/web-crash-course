@@ -1,0 +1,249 @@
+      /* CSS Reset ---------------------------------------- */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+	font-family: 'Genericons';
+	src: url('fonts/genericons/genericons-regular-webfont.eot');
+	src: url('fonts/genericons/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/genericons/genericons-regular-webfont.woff') format('woff'),
+	     url('fonts/genericons/genericons-regular-webfont.ttf') format('truetype'),
+	     url('fonts/genericons/genericons-regular-webfont.svg#genericonsregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+      
+      /* Page --------------------------------------------- */
+      .content {
+        width: 960px;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8em;
+      }
+      ul {
+        list-style: none;
+      }
+      
+      /* Header ------------------------------------------- */
+      .headerwidgets {
+        width: 30%; 
+        float: left;
+        margin: 1.5%;
+      }
+      .logo, .specialstory {
+        height: 80px; 
+      }
+      .latestnews h4 {
+        background-color: #ecedef; 
+        padding: 5px 15px;
+        margin-bottom: 5px;
+      }
+      
+      .subbar {
+        clear: both; 
+        border-top: 1px solid #efefef;
+        width: 100%;
+      }
+      .date, .weather, .hottopics {
+        font-weight: bold;
+        padding: 10px 0;
+      }
+      .date {
+        float: left;
+      }
+      .weather {
+        float: right; 
+      }
+      input[type="search"] {
+        width: 70%;
+        height: 36px;
+      }
+      input[type="submit"] {
+        background-color: #3b3b48;
+        color: white;
+        width: 28%;
+        height: 36px;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        border-radius: 0;
+        position: relative;
+        left: -5px;
+        top: 1px;
+      }
+      .social {
+        float: right;
+      }
+      .social li {
+        display: inline-block; 
+        display: none;
+        position: relative;
+      }
+      .social li a::before {
+        color: #a5a5a5;
+        display: inline-block;
+        font-family: 'FontAwesome';
+      }
+      .social li a[href*="twitter.com"]::before {
+        content: '\f099';
+      }
+      .social li a[href*="facebook.com"]::before {
+        content: '\f230';
+      }
+      .social li a[href*="plus.google.com"]::before {
+        content: '\f0d5';
+      }
+      
+      /* Navigation -------------------------------------- */
+      #mainmenu {
+        clear: both;
+        width: 100%;
+        background-color: #3b3b48;
+        height: 36px;
+        margin-bottom: 10px;
+      }
+      #mainmenu ul {
+        float: left;
+        padding-top: 10px;
+      }
+      #mainmenu li {
+        display: inline;
+        padding: 10px;
+        height: 36px;
+        border-right: 1px solid black;
+      }
+      #mainmenu a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+      }
+      .subitem {
+        font-size: 0.9em; 
+      }
+      .subitem a {
+        color: #ccccc3; 
+      }
+      .dropdown {
+        background-color: #0083ca;
+        color: white;
+        width: 140px;
+        text-align: center;
+        height: 36px;
+        float: right;
+      }
+      .dropdown p {
+        padding-top: 10px; 
+      }
+      
+      /* Main Section ------------------------------------ */
+
+      
+      /* Sidebar ----------------------------------------- */
+      #sidebar {
+        width: 340px;
+        float: right;
+      }
+      .briefing {
+        background-color: #0083ca;
+        color: white;
+        padding: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+      .briefing span {
+        font-weight: normal; 
+      }
+      .briefingbutton {
+        text-transform: lowercase;
+        color: #0083ca;
+        background-color: white;
+        font-weight: 900;
+        width: 20px;
+        height: 20px;
+        padding: 6px;
+        border-radius: 20px;
+        float: right;
+        text-align: center;
+        margin: -5px 0;
+        font-size: 0.8em;
+      }
+      .mostviewed {
+        background-color: #e3e4e9;
+        padding: 15px;
+      }
+      .mostviewed a {
+        color: #333;
+        text-decoration: none;
+      }
+      .mostviewed ol {
+        margin-top: 15px;
+        margin-left: 20px;
+        font-weight: bold;
+      }
+      .mostviewed li::before {
+        font-size: 2em;
+      }
+      .mostviewed li {
+        padding: 10px 0;
+        border-bottom: 1px solid #c3c3c3;
+        border-top: 1px solid #f6f7f8;
+      }
+      .mostviewed li:first-child {
+        border-top: none; 
+      }
+      .mostviewed li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      
+      /* Footer ------------------------------------------ */
+      #pagefooter {
+        clear: both; 
+        width: 100%;
+        background-color: #084794;
+        padding: 30px 0;
+        color: white;
+      }
+      .col {
+        width: 18%;
+        float: left;
+        margin: 0 1%;
+      }
+      .col h2 {
+        border-bottom: 1px solid #093673; 
+        font-weight: normal;
+        padding-bottom: 10px;
+        color: #ccccc3;
+      }
+      .col ul {
+        border-top: 1px solid #2c5997; 
+        padding-top: 5px;
+        margin-bottom: 20px;
+      }
+      .col li {
+        padding: 5px 0; 
+      }
+      .col a {
+        color: #9cbfd1;
+        text-decoration: none;
+      }
+      .col a:hover {
+        color: white; 
+      }
+      .copyright {
+        clear: both; 
+        text-align: right;
+      }
+      .copyright img {
+        margin: 5px 10px 0;
+        padding-top: 5px;
+      }
+      .copyright span {
+        font-weight: bold; 
+      }

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Learning jQuery</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<style type="text/css">
+			.box {
+				background-color: red;
+				width: 100px;
+				height: 100px;
+				margin-bottom: 10px;
+			}
+			#circle {
+				background-color: green;
+				width: 100px;
+				height: 100px;
+				border-radius: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hi, my name is Aaron.</h1>
+		<button id="fOut">Fade Out</button>
+		<button id="fIn">Fade In</button>
+	
+		<div class="box"></div>
+		<div class="box"></div>
+		<div id="circle"></div>
+	
+		<script>
+			// http://code.jquery.com/jquery-latest.min.js
+			// Challenge: Make 2 red boxes and 1 green circle
+			if ( typeof jQuery != "undefined" ) {
+				// alert("jQuery is installed!");
+			} else {
+				// alert("jQuery is NOT installed!");
+			}
+			
+			// JS: document.getElementById("box").onclick = function() { ... }
+			$("div").click(function() {
+				// alert("Box clicked!");
+				//$(this).css("display", "none");
+				//$(this).hide();		// .show(); = .css("display", "block");
+				
+				//$(this).fadeOut("fast");
+				
+				$(this).css("width", "400px");
+				$(this).css("height", "400px");
+				$(this).css("borderRadius", "400px");
+			});
+			
+			$("#fOut").click(function() {
+				$("h1").fadeOut("slow");
+			});
+			$("#fIn").click(function() {
+				$("h1").fadeIn("slow");
+			});
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

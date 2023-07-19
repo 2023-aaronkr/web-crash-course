@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<title>jQuery UI</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+		<style type="text/css">
+			#box {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+			#box2 {
+				width: 300px;
+				height: 300px;
+				background-color: green;
+			}
+			#box3 {
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">Drag me!</div>
+		<div id="box2">Target!</div>
+		<div id="box3">Resize me!</div>
+
+		<script>
+			$("#box").draggable();
+			$( "#box2" ).droppable({
+				drop: function( event, ui ) { $("#box2").css("backgroundColor", "gold"); }
+			});
+			$("#box3").resizable();
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

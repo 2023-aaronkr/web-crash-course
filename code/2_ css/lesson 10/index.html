@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+	<meta />
+	<title>Position</title>
+	<style type="text/css">
+		body {
+			background-color: black;
+		}
+		#page {
+			background-color: #eaeaea;
+			width: 960px;
+			margin: 0 auto;
+		}
+		header, footer {
+			background-color: orange;
+		}
+		section {
+			background-color: #3f1;
+			width: 720px;
+			height: 6000px;
+			float: left;
+		}
+		aside {
+			background-color: green;
+			width: 240px;
+			height: 600px;
+			float: right;
+		}
+		#main-menu li {
+			display: inline;
+			padding-right: 20px;
+		}
+		article {
+			background-color: white;
+			width: 280px;
+			/* height: 240px; */
+			margin: 10px;
+			padding: 30px;
+			float: left;
+		}
+		.clear {
+			clear: both;
+		}
+		.one { /* top, right, bottom, left */
+			padding: 30px 0 100px 10px;
+			margin: 50px 20px 70px 10px;
+			padding-bottom: 10px;
+			
+			/* wide, color, type */
+			border: 10px black solid;
+			border-style: dotted double ridge dashed;
+			border-width: 2px 20px 5px 12px;
+			border-color: green blue red yellow;
+		
+			text-align: justify;
+			text-indent: 50px;
+		}
+		.two {
+			width:280px;
+			height: 280px;
+			border-radius: 200px 20px 70px 0;
+			text-align: center;
+		}
+		.intro {
+			font-family: Impact, sans-serif;
+			font-size: 2em; /* 1em = m = 16px -> 64px */
+		}
+		.name {
+			font-style: italic; /* oblique */
+			color: orange;
+			text-decoration: overline;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<div id="page">
+	<header>
+		<hgroup>
+			<h1>Position</h1>
+			<h2>Learning floats and positioning</h2>
+		</hgroup>
+		<nav id="main-menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Hobbies</a></li>
+				<li><a href="#">Classes</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<article class="one">
+			<span class="intro">Hello, my name is 
+			<span class="name">Aaron Snowberger.
+			</span></span> Lorem Ipsum is simply 
+			dummy text of the printing and typesetting industry. Lorem 
+			Ipsum has been the industry's standard dummy text ever 
+			since the 1500s, when an unknown printer took a galley of 
+			type and scrambled it to make a type specimen book. It has 
+			survived not only five centuries, but also the leap into 
+			electronic typesetting, remaining essentially unchanged. 
+			It was popularised in the 1960s with the release of Letraset 
+			sheets containing Lorem Ipsum passages, and more recently 
+			with desktop publishing software like Aldus PageMaker including 
+			versions of Lorem Ipsum.
+		</article>
+		<article class="two">
+			I like to eat chocolate.
+		</article>
+		<div class="clear"></div>
+		<article class="three">
+			I like to watch Hollywood action videos.
+		</article>
+		<article class="four">
+			I like to play board games.
+		</article>
+	</section>
+	<aside>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Hobbies</a></li>
+				<li><a href="#">Classes</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<footer>
+		&copy; 2015 Aaron Snowberger
+	</footer>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

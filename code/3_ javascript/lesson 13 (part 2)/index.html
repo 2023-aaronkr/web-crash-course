@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+	<meta />
+	<title>Learning JavaScript</title>
+	<style type="text/css">
+		div {
+			height: 200px;
+			width: 200px;
+			float: left;
+			margin: 10px;
+			padding: 20px;
+			background-color: #eaeaea;
+		}
+		#redcircle {
+			background-color: red;
+			border-radius: 200px;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<p id="first">My name is Aaron.</p>
+	<button id="myButton">Click me!</button>
+	
+	<!-- MY NEW BUTTONS ------------->
+	<hr>
+	
+	<input id="movie" type="text" value="Avatar" />
+	<button id="textChanger">Change text</button>
+	<div id="one">
+		My favorite movie is ...
+	</div>
+	
+	<div id="two">
+		Computer B class is...
+		<button id="textAppender">Append text</button>
+	</div>
+	
+	<div id="three">
+		<button id="textCreator">Create text</button>
+	</div>
+	<!-- END MY NEW BUTTONS ------------->
+	
+	<p style="clear: both;">How's the weather?</p>
+	<input type="text" id="weather2" />
+	<button id="weatherButton">Submit</button>
+	
+	<div id="redcircle"></div>
+	
+	<script>
+	
+		var foods = new Array();
+		foods[0] = "pizza";
+		foods[1] = "kimbap";
+		foods[2] = "hamburger";
+		
+		var classes = ["Computer A", "Computer B", "AP Computer"];
+		
+		var weather = ["rain", "sun", "snow"];
+		console.log("The weather array has " + weather);
+		weather.push("hail");
+		console.log("The weather array has " + weather);
+		weather.splice(1, 1);
+		console.log("The weather array has " + weather);
+		weather.splice(0, 3);
+		console.log("The weather array has " + weather);
+		weather = ["rain", "sun", "snow"];
+		console.log("The weather array has " + weather);
+		weather.splice(1, 0, "hail", "cloudy");
+		console.log("The weather array has " + weather);
+		console.log("Weather has " + weather.length + " items in it.");
+		
+		// IF statements
+		var todaysWeather;
+		document.getElementById("weatherButton").onclick = function() {
+			todaysWeather = document.getElementById("weather2").value;
+			if ( todaysWeather == "rain" ) {
+				alert("It's raining!");
+			} else if ( todaysWeather == "sun" ) {
+				alert("It's sunny!");
+			} else if ( todaysWeather == "snow" ) {
+				alert("It's snowing!");
+			} else if ( todaysWeather == "hail" ) {
+				alert("It's hailing!");
+			} else if ( todaysWeather == "cloudy" ) {
+				alert("It's cloudy!");
+			} else {
+				alert("Looks like strange weather. What's " + todaysWeather + "?" );
+			}
+		}
+	
+		var div1 = "first";
+	
+		document.getElementById(div1).innerHTML = "My name is Fred.";
+		document.getElementById(div1).style.color = "red";
+		
+		document.getElementById("myButton").onclick = function() {
+			alert("You clicked my button!");
+		}
+		
+		var box1 = document.getElementById("one");
+		var box2 = document.getElementById("two");
+		var box3 = document.getElementById("three");
+		
+		console.log(foods);
+		
+		// Box one
+		var newText = document.getElementById("movie").value;
+		console.log("I'm in box one.");
+		document.getElementById("textChanger").onclick = function() {
+			newText = document.getElementById("movie").value;
+			box1.innerHTML = "My favorite movie is " + newText + ".";
+			console.log("I changed the text.");
+		}
+		// Box two
+		document.getElementById("textAppender").onclick = function() {
+			box2.innerHTML = box2.innerHTML + foods[3];
+		}
+		// Box three
+		document.getElementById("textCreator").onclick = function() {
+			box3.innerHTML = "<ul><li>Cat</li><li>Dog</li><li>Hamster</li></ul>";
+		}
+		
+		// Create a red circle <div> that disappears if you click it.
+		// Don't use .innerHTML, use .style.display = "";
+		document.getElementById("redcircle").onclick = function() {
+			document.getElementById("redcircle").style.display = "none";
+		}
+		// this
+		
+
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

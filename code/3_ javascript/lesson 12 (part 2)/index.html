@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<meta />
+	<title>Learning JavaScript</title>
+	<style type="text/css">
+		div {
+			height: 200px;
+			width: 200px;
+			float: left;
+			margin: 10px;
+			padding: 20px;
+			background-color: #eaeaea;
+		}
+		#redcircle {
+			background-color: red;
+			border-radius: 200px;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<p id="first">My name is Aaron.</p>
+	<button id="myButton">Click me!</button>
+	
+	<!-- MY NEW BUTTONS ------------->
+	<div id="one">
+		My favorite movie is Avatar.
+		<button id="textChanger">Change text</button>
+	</div>
+	
+	<div id="two">
+		Computer B class is...
+		<button id="textAppender">Append text</button>
+	</div>
+	
+	<div id="three">
+		<button id="textCreator">Create text</button>
+	</div>
+	<!-- END MY NEW BUTTONS ------------->
+	
+	<div id="redcircle"></div>
+	
+	<script>
+		document.getElementById("first").innerHTML = "My name is Fred.";
+		document.getElementById("first").style.color = "red";
+		
+		document.getElementById("myButton").onclick = function() {
+			alert("You clicked my button!");
+		}
+		
+		// Box one
+		document.getElementById("textChanger").onclick = function() {
+			document.getElementById("one").innerHTML = "I changed the text.";
+		}
+		// Box two
+		document.getElementById("textAppender").onclick = function() {
+			document.getElementById("two").innerHTML = 
+				document.getElementById("two").innerHTML + "...hard.";
+		}
+		// Box three
+		document.getElementById("textCreator").onclick = function() {
+			document.getElementById("three").innerHTML = 
+				"<ul><li>Cat</li><li>Dog</li><li>Hamster</li></ul>";
+		}
+		
+		// Create a red circle <div> that disappears if you click it.
+		// Don't use .innerHTML, use .style.display = "";
+		document.getElementById("redcircle").onclick = function() {
+			document.getElementById("redcircle").style.display = "none";
+		}
+		// this
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

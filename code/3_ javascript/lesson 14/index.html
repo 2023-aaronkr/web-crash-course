@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JavaScript Game 1</title>
+		<style type="text/css">
+		
+		</style>
+	</head>
+	<body>
+		<h1>How many fingers?</h1>
+		<p>Computer: "How many fingers am I holding up?"</p>
+		<input type="text" id="fingers" />
+		<button id="guess">Guess</button>
+		
+		<script type="text/javascript">
+		
+			// alert(Math.random());
+			
+			var x = Math.random(); // Between 0-1
+			x = x*6; // Between 0-6
+			x = Math.floor(x); // Round down
+			// alert(x);
+			
+			document.getElementById( "guess" ).onclick = function() {
+				var myGuess = document.getElementById( "fingers" ).value;
+				
+				if ( myGuess == x ) {
+					alert( "You guessed correctly!" );
+				} else {
+					alert( "Incorrect! My number was " + x + "!" );
+				}
+				
+				// Reset the computer's number
+				x = Math.random();
+				x = x*6;
+				x = Math.floor(x);
+			}
+			
+			// LOOPS - Repeat some function or command
+			// 1. "for" loop = for some set time... do something
+			// 2. "while" loop = while something is TRUE... do something
+			
+			for ( var i = 0; /* Start */ i < 10000; /* How long? */ i += 200 ) {
+				// alert( "Loop number " + i );
+			}
+			
+			var foods = [ "pizza", "chips", "hongoh", "bundaegi", "cheese" ];
+			for ( var i=0; i < foods.length; i++ ) {
+				alert( "I like " + foods[i] + "." );
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: Web Programming Crash Course!
+title: Web Crash Course!
 ---
 
 <p id="menu" align="center">
